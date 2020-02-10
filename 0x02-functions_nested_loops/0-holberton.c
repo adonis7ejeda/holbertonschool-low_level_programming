@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
  * main - Entry point
@@ -15,7 +14,7 @@ for (a = 0; a < 9; a++)
 _putchar(c[a]);
 }
 
-putchar('\n');
+_putchar('\n');
 
 return (0);
 }
