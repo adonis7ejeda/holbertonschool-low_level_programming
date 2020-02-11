@@ -1,1 +1,1 @@
-This is a directory for 0x03-debugging
+This is a directory 0x03-debugging
