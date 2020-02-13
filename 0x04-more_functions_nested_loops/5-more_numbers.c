@@ -9,35 +9,30 @@
 
 void more_numbers(void)
 {
-
-int a;
-char b;
-char c;
-
-for (a = 1; a <= 10; a++)
+char a, b, c, i;
+for (i = 0; i <= 10; i++)
 {
 
-for (b = '0'; b <= '9'; b++)
+for (a = 0; a <= 14; a++)
 {
 
-_putchar(b);
-if (b == '9')
+if (a < 10)
 {
 
-for (c = '0'; c <= '4'; c++)
-{
-
-_putchar('1');
-_putchar(c);
+b = a;
 
 }
+else
+{
+
+c = a / 10;
+b = a % 10;
+_putchar(c + '0');
 
 }
-
+_putchar(b + '0');
 }
-
 _putchar('\n');
-
 }
 
 }
