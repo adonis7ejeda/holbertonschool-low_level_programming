@@ -7,11 +7,8 @@
  * Return: none
  */
 
-int main(int argc, char *argv[])
-{
-if (argc >= 1)
+int main(__attribute__((unused)) int argc, char *argv[])
 {
 printf("%s\n", argv[0]);
-}
 return (0);
 }
