@@ -25,6 +25,7 @@ return (NULL);
 
 for (i = 0; i <= max; i++)
 a[i] = i;
+min++;
 
 return (a);
 }
