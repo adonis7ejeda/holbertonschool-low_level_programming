@@ -23,9 +23,8 @@ a = malloc(sizeof(int) * max + 1);
 if (a == NULL)
 return (NULL);
 
-for (i = 0; i <= max; i++)
-a[i] = i;
-min++;
+for (i = 0; i <= max; i++, min++)
+a[i] = min;
 
 return (a);
 }
