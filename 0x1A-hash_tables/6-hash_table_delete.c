@@ -4,25 +4,24 @@
  * @ht: hash table
  * Return: nothing
  */
+
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_node_t *temp;
+	hash_node_t *node, *aux;
 	unsigned long int i;
 
-	if (!ht)
+	if (ht == NULL)
 		return;
 	for (i = 0; i < ht->size; i++)
 	{
-		if (ht->array[i])
+		node = ht->array[i];
+		while (node)
 		{
-			while (ht->array[i])
-			{
-				temp = ht->array[i];
-				free(temp->key);
-				free(temp->value);
-				ht->array[i] = ht->array[i]->next;
-				free(temp);
-			}
+			aux = node->next;
+			free(node->key);
+			free(node->value);
+			free(node);
+			node = aux;
 		}
 	}
 	free(ht->array);
